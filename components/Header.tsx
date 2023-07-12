@@ -6,7 +6,7 @@ type Props = {};
 
 const Header = (props: Props) => {
 	return (
-		<header className="sticky top-0 p-5 flex justify-between w-screen mx-auto max-w-7xl z-20 xl:items-center">
+		<header className="backdrop-opacity-5 bg-transparent sticky top-0 p-5 flex justify-between w-screen mx-auto max-w-7xl z-20 xl:items-center overflow-visible">
 			<motion.div
 				initial={{
 					x: -500,

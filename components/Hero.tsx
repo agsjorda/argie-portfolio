@@ -13,16 +13,16 @@ const Hero = (props: Props) => {
 		words: [
 			"Hi! The Name's Arthur",
 			"A-Hooman-who-loves-coffee",
-			"AndPaintWithCode",
+			"<AndPaintWithCode/>",
 		],
 		loop: true,
 		delaySpeed: 2000,
 	});
 	return (
-		<div className="h-screen flex flex-col space-y-8 items-center justify-center text-center overflow-hidden">
+		<div className="relative h-screen flex flex-col space-y-8 items-center justify-center text-center overflow-hidden">
 			<BackgroundCircles />
 			<Image
-				className="relative rounded-full h-32 w-32 mx-auto object-cover"
+				className=" rounded-full h-32 w-32 mx-auto object-cover m-0"
 				src={images.profile2}
 				alt="Picture of the author"
 				// width={500} automatically provided
@@ -30,12 +30,12 @@ const Hero = (props: Props) => {
 				// blurDataURL="data:..." automatically provided
 				// placeholder="blur" // Optional blur-up while loading
 			/>
-			<div className="z-20">
-				<h2 className="text-sm uppercase text-gray-500 pb-2 tracking-[15px]">
+			<div className=" z-20">
+				<h2 className="text-[10px] sm:text-sm uppercase text-gray-500 pb-2 tracking-[10px] sm:tracking-[15px]">
 					Software Engineer
 				</h2>
 
-				<h1 className="text-5xl lg:text-6xl font-semibold px-10">
+				<h1 className="text-[1.3rem] sm:text-4xl lg:text-6xl font-semibold px-10">
 					<span className="mr-3">{text}</span>
 					<Cursor cursorColor="#f7ab0a" />
 				</h1>

@@ -5,6 +5,7 @@ import Header from "../components/Header";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
 import WorkExperience from "@/components/WorkExperience";
+import Skills from "@/components/Skills";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -12,7 +13,7 @@ export default function Home() {
 	return (
 		<div
 			className="bg-[rgb(36,36,36)] text-white h-screen snap-y snap-mandatory
-		  scroll-smooth scroll-py-44 overflow-scroll z-0 transition-all delay-1500"
+		  scroll-smooth  overflow-scroll z-0 "
 		>
 			{/* Header */}
 			<Head>
@@ -20,23 +21,17 @@ export default function Home() {
 			</Head>
 
 			<Header />
-			<section
-				id="hero"
-				className="snap-start snap-normal scroll-smooth duration-1000 ease-in-out"
-			>
+			<section id="hero" className="snap-start snap-always mt-10">
 				<Hero />
 			</section>
-			<section
-				id="about"
-				className="snap-center snap-normal scroll-smooth duration-1000 ease-in-out"
-			>
+			<section id="about" className="snap-start snap-always ">
 				<About />
 			</section>
-			<section
-				id="experience"
-				className="snap-center snap-normal scroll-smooth duration-1000 ease-in-out"
-			>
+			<section id="experience" className="snap-start snap-always ">
 				<WorkExperience />
+			</section>
+			<section id="skills" className="snap-start snap-always ">
+				<Skills />
 			</section>
 			{/* Skills */}
 			{/* Projects */}

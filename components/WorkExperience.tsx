@@ -40,7 +40,7 @@ const WorkExperience = (props: Props) => {
 			}}
 			transition={{ duration: 1.2 }}
 			whileInView={{ x: 0, opacity: [0, 0.2, 1] }}
-			className="h-screen flex relative overflow-hidden flex-col text-left md:flex-row
+			className="h-screen flex relative  flex-col text-left md:flex-row
 		max-w-full px-10 justify-center items-center mx-auto"
 		>
 			<h3 className="absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl">
@@ -48,7 +48,7 @@ const WorkExperience = (props: Props) => {
 			</h3>
 			<div
 				id="cards"
-				className="w-full h-[70%] flex space-x-5 overflow-x-scroll overflow-hidden p-10 scroll-smooth snap-x snap-mandatory"
+				className="w-full h-[70%] flex space-x-5 overflow-x-scroll no-scrollbar overflow-hidden p-10 scroll-smooth snap-x snap-mandatory"
 			>
 				<ExperienceCard id="id1" />
 				<ExperienceCard id="id2" />

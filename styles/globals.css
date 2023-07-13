@@ -7,3 +7,18 @@
     @apply px-4 py-2 mx-1 my-1 border bg-[#2a2a2a] md:bg-[rgba(78,77,77,0.1)] border-[#242424] rounded-full uppercase text-[10px] sm:text-xs tracking-widest text-gray-500 transition-all hover:border-[#f7ab0a]/40 hover:text-[#f7ab0a]/40
   }
 }
+
+@layer utilities {
+  @variants responsive {
+    /* Hide scrollbar for Chrome, Safari and Opera */
+    .no-scrollbar::-webkit-scrollbar {
+        display: none;
+    }
+
+    /* Hide scrollbar for IE, Edge and Firefox */
+    .no-scrollbar {
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
+    }
+  }
+}

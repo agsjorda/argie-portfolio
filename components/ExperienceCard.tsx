@@ -1,7 +1,6 @@
 import Image from "next/image";
 import { images } from "@/constants";
 import { motion } from "framer-motion";
-// import { FaGreaterThan, FaLessThan } from "react-icons/fa";
 import React from "react";
 
 type Props = {
@@ -36,7 +35,6 @@ const ExperienceCard = ({ id }: Props) => {
 					<Image src={images.html} alt="" className="h-10 w-10 rounded-full" />
 					<Image src={images.html} alt="" className="h-10 w-10 rounded-full" />
 					<Image src={images.html} alt="" className="h-10 w-10 rounded-full" />
-					{/* Tech Stack */}
 				</div>
 				<p className="uppercase py-5 text-gray-300">Started ... - Ended ...</p>
 				<ul className="list-disc space-y-4 ml-5 sm:text-lg">

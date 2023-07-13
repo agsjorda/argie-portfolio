@@ -15,7 +15,6 @@ const WorkExperience = (props: Props) => {
 		}
 
 		setCount((current) => current - 1);
-
 		console.log(count);
 	};
 
@@ -25,13 +24,8 @@ const WorkExperience = (props: Props) => {
 		}
 
 		setCount((current) => current + 1);
-
 		console.log(count);
 	};
-
-	// useEffect(() => {
-	// 	console.log(count);
-	// }, [count]);
 
 	return (
 		<motion.div
@@ -48,7 +42,7 @@ const WorkExperience = (props: Props) => {
 			</h3>
 			<div
 				id="cards"
-				className="w-full h-[70%] flex space-x-5 overflow-x-scroll no-scrollbar overflow-hidden p-10 scroll-smooth snap-x snap-mandatory"
+				className="w-full h-[70%] flex space-x-5 overflow-x-scroll overflow-hidden p-10 scroll-smooth snap-x snap-mandatory scrollbar-thin  scrollbar-track-gray-400/20 scrollbar-thumb-[#f7ab0a]/80"
 			>
 				<ExperienceCard id="id1" />
 				<ExperienceCard id="id2" />

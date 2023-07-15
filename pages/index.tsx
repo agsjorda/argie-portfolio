@@ -45,7 +45,10 @@ export default function Home() {
 			</section>
 			<Link href="#hero">
 				<footer className="sticky bottom-5 w-full cursor-pointer">
-					<div className="flex justify-center items-center">
+					<div
+						className="flex justify-center items-center
+"
+					>
 						<ChevronUpIcon className=" h-6 w-6 animate-pulse" />
 					</div>
 				</footer>

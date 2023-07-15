@@ -8,6 +8,8 @@ import WorkExperience from "@/components/WorkExperience";
 import Skills from "@/components/Skills";
 import Projects from "@/components/Projects";
 import Contact from "@/components/Contact";
+import Link from "next/link";
+import { ChevronUpIcon } from "@heroicons/react/24/solid";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -41,6 +43,13 @@ export default function Home() {
 			<section id="contact" className="snap-start snap-always ">
 				<Contact />
 			</section>
+			<Link href="#hero">
+				<footer className="sticky bottom-5 w-full cursor-pointer">
+					<div className="flex justify-center items-center">
+						<ChevronUpIcon className=" h-6 w-6 animate-pulse" />
+					</div>
+				</footer>
+			</Link>
 		</div>
 	);
 }

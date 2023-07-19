@@ -18,6 +18,6 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "argie-sanity-backend/schemas/project.js", "argie-sanity-backend/schemas/pageInfo.js", "argie-sanity-backend/schemas/experience.js"],
   "exclude": ["node_modules"]
 }

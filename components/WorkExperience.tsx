@@ -3,10 +3,13 @@ import React, { useEffect, useState } from "react";
 import { FaGreaterThan, FaLessThan } from "react-icons/fa";
 import ExperienceCard from "./ExperienceCard";
 import Link from "next/link";
+import { Experience } from "@/typings";
 
-type Props = {};
+type Props = {
+	experiences: Experience[];
+};
 
-const WorkExperience = (props: Props) => {
+const WorkExperience = ({ experiences }: Props) => {
 	const [count, setCount] = useState(1);
 
 	const handleClickLeft = () => {
@@ -44,9 +47,13 @@ const WorkExperience = (props: Props) => {
 				id="cards"
 				className="w-full h-[70%] flex space-x-5 overflow-x-scroll overflow-hidden p-10 scroll-smooth snap-x snap-mandatory scrollbar-thin  scrollbar-track-gray-400/20 scrollbar-thumb-[#f7ab0a]/80"
 			>
-				<ExperienceCard id="id1" />
-				<ExperienceCard id="id2" />
-				<ExperienceCard id="id3" />
+				{experiences?.map((experience, index) => (
+					<ExperienceCard
+						id={`#id${index + 1}`}
+						key={experience._id}
+						experience={experience}
+					/>
+				))}
 			</div>
 			<div className="absolute top-[50%] sm:flex w-[100%] justify-around hidden">
 				<Link href={`#id${count - 1}`}>

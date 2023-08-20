@@ -5,13 +5,17 @@ import Image from "next/image";
 
 import BackgroundCircles from "./BackgroundCircles";
 import Link from "next/link";
+import { PageInfo } from "@/typings";
+import { urlFor } from "@/sanity";
 
-type Props = {};
+type Props = {
+	pageInfo: PageInfo;
+};
 
-const Hero = (props: Props) => {
+const Hero = ({ pageInfo }: Props) => {
 	const [text, count] = useTypewriter({
 		words: [
-			"Hi! The Name's Arthur",
+			`Hi! The Name's ${pageInfo?.name}`,
 			"A-Hooman-who-loves-coffee",
 			"<AndPaintWithCode/>",
 		],
@@ -23,8 +27,10 @@ const Hero = (props: Props) => {
 			<BackgroundCircles />
 			<Image
 				className=" rounded-full h-32 w-32 mx-auto object-cover m-0"
-				src={images.profile2}
+				src={urlFor(pageInfo?.heroImage).url()}
 				alt="Picture of the author"
+				width={500}
+				height={500}
 				// width={500} automatically provided
 				// height={500} automatically provided
 				// blurDataURL="data:..." automatically provided
@@ -32,7 +38,7 @@ const Hero = (props: Props) => {
 			/>
 			<div className=" z-20">
 				<h2 className="text-[10px] sm:text-sm uppercase text-gray-500 pb-2 tracking-[10px] sm:tracking-[15px]">
-					Software Engineer
+					{pageInfo?.role}
 				</h2>
 
 				<h1 className="text-[1.3rem] sm:text-4xl lg:text-6xl font-semibold px-10">

@@ -2,10 +2,14 @@ import React from "react";
 import { motion } from "framer-motion";
 import { images } from "../constants";
 import Image from "next/image";
+import { PageInfo } from "@/typings";
+import { urlFor } from "@/sanity";
 
-type Props = {};
+type Props = {
+	pageInfo: PageInfo;
+};
 
-const About = (props: Props) => {
+const About = ({ pageInfo }: Props) => {
 	return (
 		<div
 			className="flex flex-col relative h-screen text-center md:text-left md:flex-row max-w-7xl px-10
@@ -22,7 +26,9 @@ const About = (props: Props) => {
 				whileInView={{ x: 0, opacity: [0, 0.2, 1] }}
 			>
 				<Image
-					src={images.profile}
+					src={urlFor(pageInfo?.profilePic).url()}
+					width={500}
+					height={500}
 					alt="image profile"
 					className=" mt-16 md:mb-0 flex-shrink-0 w-56 h-56 rounded-full object-cover 
 					md:rounded-lg md:w-96 md:h-64 xl:w-[400px] xl:h-[400px]"
@@ -34,10 +40,7 @@ const About = (props: Props) => {
 					<span className="underline decoration-[#f7ab0a]/50">little</span>{" "}
 					background
 				</h4>
-				<p className="text-base">
-					I&apos;m Arthur. I love Art, Story and Technology and incorporate them
-					to create and design anything beautiful and useful stuff.
-				</p>
+				<p className="text-base">{pageInfo?.backgroundInformation}</p>
 			</div>
 		</div>
 	);

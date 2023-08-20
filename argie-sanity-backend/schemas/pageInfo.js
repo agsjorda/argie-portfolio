@@ -13,15 +13,15 @@ export default defineType({
     defineField({
       name: 'role',
       type: 'string',
-      title: 'Role'
+      title: 'Role',
     }),
     defineField({
       name: 'heroImage',
       type: 'image',
       title: 'Image',
       options: {
-        hotspot: true
-      }
+        hotspot: true,
+      },
     }),
     defineField({
       name: 'backgroundInformation',
@@ -33,8 +33,8 @@ export default defineType({
       type: 'image',
       title: 'ProfilePic',
       options: {
-        hotspot: true
-      }
+        hotspot: true,
+      },
     }),
     defineField({
       name: 'phoneNumber',
@@ -55,7 +55,7 @@ export default defineType({
       name: 'socials',
       type: 'array',
       title: 'Socials',
-      of: [{type: "reference", to:{type: "social"}}],
-    })
+      of: [{type: 'reference', to: {type: 'social'}}],
+    }),
   ],
 })

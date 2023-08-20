@@ -1,10 +1,13 @@
 import React from "react";
 import { SocialIcon } from "react-social-icons";
 import { motion } from "framer-motion";
+import { Social } from "@/typings";
 
-type Props = {};
+type Props = {
+	socials: Social[];
+};
 
-const Header = (props: Props) => {
+const Header = ({ socials }: Props) => {
 	return (
 		<header className="backdrop-opacity-5 bg-transparent sticky top-0 p-5 flex justify-between w-screen mx-auto max-w-7xl z-20 xl:items-center overflow-visible">
 			<motion.div
@@ -23,22 +26,14 @@ const Header = (props: Props) => {
 				className="text-red-600 font-bold flex flex-row justify-start items-center"
 			>
 				{/* Social Icons */}
-				<SocialIcon
-					url="https://www.facebook.com/akintofesbook/"
-					fgColor="gray"
-					bgColor="transparent"
-				/>
-				<SocialIcon
-					url="https://www.facebook.com/akintofesbook/"
-					fgColor="gray"
-					bgColor="transparent"
-				/>
-				<SocialIcon
-					url="https://www.facebook.com/akintofesbook/"
-					fgColor="gray"
-					bgColor="transparent"
-				/>
-				<h1 className="font-extrabold">Hello</h1>
+				{socials.map((social) => (
+					<SocialIcon
+						key={social._id}
+						url={social.url}
+						fgColor="gray"
+						bgColor="transparent"
+					/>
+				))}
 			</motion.div>
 			<motion.div
 				initial={{
